@@ -17,7 +17,7 @@ class CollaboratorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create collaborator" do
     assert_difference('Collaborator.count') do
-      post collaborators_url, params: { collaborator: {  } }
+      post collaborators_url, params: { collaborator: { department: @collaborator.department, job: @collaborator.job, materno: @collaborator.materno, name: @collaborator.name, paterno: @collaborator.paterno, registration_date: @collaborator.registration_date } }
     end
 
     assert_redirected_to collaborator_url(Collaborator.last)
@@ -34,7 +34,7 @@ class CollaboratorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update collaborator" do
-    patch collaborator_url(@collaborator), params: { collaborator: {  } }
+    patch collaborator_url(@collaborator), params: { collaborator: { department: @collaborator.department, job: @collaborator.job, materno: @collaborator.materno, name: @collaborator.name, paterno: @collaborator.paterno, registration_date: @collaborator.registration_date } }
     assert_redirected_to collaborator_url(@collaborator)
   end
 

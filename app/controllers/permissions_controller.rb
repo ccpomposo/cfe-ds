@@ -69,6 +69,6 @@ class PermissionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def permission_params
-      params.fetch(:permission, {})
+      params.require(:permission).permit(:collaborator, :assignment)
     end
 end

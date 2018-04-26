@@ -11,6 +11,36 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :collaborator_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paterno %>
+    <%= form.text_field :paterno, id: :collaborator_paterno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :materno %>
+    <%= form.text_field :materno, id: :collaborator_materno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job %>
+    <%= form.text_field :job, id: :collaborator_job %>
+  </div>
+
+  <div class="field">
+    <%= form.label :department %>
+    <%= form.text_field :department, id: :collaborator_department %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registration_date %>
+    <%= form.text_field :registration_date, id: :collaborator_registration_date %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

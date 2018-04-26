@@ -11,6 +11,16 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :collaborator %>
+    <%= form.text_field :collaborator, id: :permission_collaborator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assignment %>
+    <%= form.text_field :assignment, id: :permission_assignment %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

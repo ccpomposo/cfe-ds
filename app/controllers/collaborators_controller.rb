@@ -69,6 +69,6 @@ class CollaboratorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def collaborator_params
-      params.fetch(:collaborator, {})
+      params.require(:collaborator).permit(:name, :paterno, :materno, :job, :department, :registration_date)
     end
 end

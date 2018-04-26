@@ -11,6 +11,31 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :assignment_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date, id: :assignment_start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.text_field :end_date, id: :assignment_end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :collaborator %>
+    <%= form.text_field :collaborator, id: :assignment_collaborator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :assignment_status %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

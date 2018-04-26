@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Collaborator</th>
+      <th>Assignment</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +14,8 @@
   <tbody>
     <% @permissions.each do |permission| %>
       <tr>
+        <td><%= permission.collaborator %></td>
+        <td><%= permission.assignment %></td>
         <td><%= link_to 'Show', permission %></td>
         <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
         <td><%= link_to 'Destroy', permission, method: :delete, data: { confirm: 'Are you sure?' } %></td>

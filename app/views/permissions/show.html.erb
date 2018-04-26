@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Collaborator:</strong>
+  <%= @permission.collaborator %>
+</p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @permission.assignment %>
+</p>
+
 <%= link_to 'Edit', edit_permission_path(@permission) %> |
 <%= link_to 'Back', permissions_path %>

@@ -5,6 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Description</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Collaborator</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +17,11 @@
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
+        <td><%= assignment.description %></td>
+        <td><%= assignment.start_date %></td>
+        <td><%= assignment.end_date %></td>
+        <td><%= assignment.collaborator %></td>
+        <td><%= assignment.status %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

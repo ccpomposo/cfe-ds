@@ -17,7 +17,7 @@ class PermissionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create permission" do
     assert_difference('Permission.count') do
-      post permissions_url, params: { permission: {  } }
+      post permissions_url, params: { permission: { assignment: @permission.assignment, collaborator: @permission.collaborator } }
     end
 
     assert_redirected_to permission_url(Permission.last)
@@ -34,7 +34,7 @@ class PermissionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update permission" do
-    patch permission_url(@permission), params: { permission: {  } }
+    patch permission_url(@permission), params: { permission: { assignment: @permission.assignment, collaborator: @permission.collaborator } }
     assert_redirected_to permission_url(@permission)
   end
 

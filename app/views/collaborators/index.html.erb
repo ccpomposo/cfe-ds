@@ -5,6 +5,12 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Paterno</th>
+      <th>Materno</th>
+      <th>Job</th>
+      <th>Department</th>
+      <th>Registration date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +18,12 @@
   <tbody>
     <% @collaborators.each do |collaborator| %>
       <tr>
+        <td><%= collaborator.name %></td>
+        <td><%= collaborator.paterno %></td>
+        <td><%= collaborator.materno %></td>
+        <td><%= collaborator.job %></td>
+        <td><%= collaborator.department %></td>
+        <td><%= collaborator.registration_date %></td>
         <td><%= link_to 'Show', collaborator %></td>
         <td><%= link_to 'Edit', edit_collaborator_path(collaborator) %></td>
         <td><%= link_to 'Destroy', collaborator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
