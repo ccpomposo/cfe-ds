@@ -24,7 +24,10 @@ class CollaboratorsController < ApplicationController
   # POST /collaborators
   # POST /collaborators.json
   def create
-    @collaborator = Collaborator.new(collaborator_params)
+    puts '******************* id='+params[:job_id]
+    job = Job.find(params[:job_id])
+    department = Department.find(params[:department_id])
+    @collaborator = Collaborator.new({name: params[:name],paterno: params[:paterno],materno: params[:materno],registration_date: params[:registration_date],job: job, department: department})
 
     respond_to do |format|
       if @collaborator.save

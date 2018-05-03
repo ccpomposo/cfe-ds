@@ -8,6 +8,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="<%= assignments_path %>">Engargos</a></li>
+        <li class="nav-item"><a class="nav-link" href="<%= collaborators_path %>">Colaboradores</a></li>
+        <li class="nav-item"><a class="nav-link" href="<%= comments_path %>">Comentarios</a></li>
+        <li class="nav-item"><a class="nav-link" href="<%= departments_path %>">Departamentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="<%= jobs_path %>">Puestos</a></li>
+        <li class="nav-item"><a class="nav-link" href="<%= permissions_path %>">Permisos</a></li>
+        <li class="nav-item"><a class="nav-link" href="<%= statuses_path %>">Status</a></li>
+      </ul>
+    </div>
+  </nav>
   <body>
     <%= yield %>
   </body>

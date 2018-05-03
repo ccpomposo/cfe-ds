@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :job %>
-    <%= form.text_field :job, id: :collaborator_job %>
+    <%= form.select :job_id, Job.all.collect {|c| [c.name, c.id]} %>
   </div>
 
   <div class="field">
     <%= form.label :department %>
-    <%= form.text_field :department, id: :collaborator_department %>
+    <%= form.select :department_id, Department.all.collect {|c| [c.description, c.id]} %>
   </div>
 
   <div class="field">
